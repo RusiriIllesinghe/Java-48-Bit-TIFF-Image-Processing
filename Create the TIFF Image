@@ -1,0 +1,9 @@
+File file = new File(directoryName + "\\Output_"
+                + System.currentTimeMillis() + ".tiff");
+FileOutputStream fileoutput = new FileOutputStream(file);
+TIFFEncodeParam encParam = null;
+ImageEncoder enc = ImageCodec.createImageEncoder("tiff", fileoutput,
+    encParam);
+
+enc.encode(wRaster, cm);
+fileoutput.close();
