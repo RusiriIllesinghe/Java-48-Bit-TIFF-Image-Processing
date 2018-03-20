@@ -1,0 +1,6 @@
+if (wRaster == null) { // Create a writable raster and get the color
+    // model.We'll use this to write the image
+
+    cm = image.getColorModel();
+    wRaster = image.getData().createCompatibleWritableRaster();
+}
