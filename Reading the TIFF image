@@ -1,0 +1,10 @@
+File file = new File(fileName.get(i));
+ 
+SeekableStream s = new FileSeekableStream(file);
+TIFFDecodeParam param = null;
+
+/*
+ * ImageDecoder is from com.sun.media.jai.codec.ImageDecoder package
+ */
+ImageDecoder dec = ImageCodec.createImageDecoder("tiff", s, param);
+raster[i] = dec.decodeAsRaster();
